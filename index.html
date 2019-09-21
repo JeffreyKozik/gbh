@@ -1,0 +1,70 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Vol</title>
+  <meta name="description" content="Vol">
+  <meta name="author" content="Vol">
+
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+<!--
+    <div id="wrapper">
+        <div id="leftMenu">
+            <div id="userPicture">
+                <p>hi</p>
+            </div>
+            <div id="links">
+                <u>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </u>
+            </div>
+            <div id="logout">
+
+            </div>
+        </div> 
+        <div id="rightUserProfile">
+            <p>hi</p>
+        </div>
+    </div>
+-->
+    
+    <input id="userName" type="text">
+    <input id="password" type="text">
+    <button id="create">create user</button>
+    <button id="login">login</button>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-auth.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAJeOk00rKxqC7vqH12T-OysJ88Y000ZaA",
+    authDomain: "volauthtest.firebaseapp.com",
+    databaseURL: "https://volauthtest.firebaseio.com",
+    projectId: "volauthtest",
+    storageBucket: "",
+    messagingSenderId: "817461452456",
+    appId: "1:817461452456:web:159163e0d1cd3ef3bf6c9d"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+    
+<script src="script.js"></script>
+
+</body>
+    
+</html>

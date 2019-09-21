@@ -6,12 +6,25 @@ firebase.auth().onAuthStateChanged(function(user) {
         currentUser = user;
     } else {
       // No user is signed in.
+
     }
   });
 
  
-var submitButtom = document.querySelector('#submit');
+var submitButton = document.querySelector('#submit');
 
-submitButtom.addEventListener('click', function () {
-    console.log(user.uid);
+submitButton.addEventListener('click', function () {
+    var name = document.querySelector('#name').value;
+    var bio = document.querySelector('#bio').value;
+
+    var uid = currentUser.uid;
+    var userRef = database.ref().child("users/"+ uid +"/info");
+    var info = {
+        name: name,
+        bio: bio,
+    };
+
+    userRef.set(info);
+
+    window.open("main-page.html", "_self");
 })

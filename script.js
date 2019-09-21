@@ -29,7 +29,7 @@ loginButton.addEventListener('click', function () {
         console.dir(response.user.uid)
 
         
-        window.open("form.html", "_self");
+        window.open("main-page.html", "_self");
     }, function(error) {
     // Handle Errors here.
     var errorCode = error.code;

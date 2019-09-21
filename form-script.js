@@ -15,13 +15,20 @@ var submitButton = document.querySelector('#submit');
 
 submitButton.addEventListener('click', function () {
     var name = document.querySelector('#name').value;
-    var bio = document.querySelector('#bio').value;
+    var dob = document.querySelector('#dob').value;
+
+    const interests = [...document.querySelectorAll('.interests')].filter(x => x.checked);
+    const skills = [...document.querySelectorAll('.skills')].filter(x => x.checked);
+    const causes = [...document.querySelectorAll('.causes')].filter(x => x.checked);
 
     var uid = currentUser.uid;
     var userRef = database.ref().child("users/"+ uid +"/info");
     var info = {
-        name: name,
-        bio: bio,
+        name,
+        dob,
+        interests,
+        skills,
+        causes
     };
 
     userRef.set(info);

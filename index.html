@@ -39,6 +39,7 @@
     <input id="userName" type="text">
     <input id="password" type="text">
     <button id="create">create user</button>
+    <button id="login">login</button>
 
 <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-app.js"></script>
@@ -62,27 +63,8 @@
   firebase.initializeApp(firebaseConfig);
 </script>
     
-<script>
-    const createButton = document.querySelector('#create');
-    
-    createButton.addEventListener('click', function() {
-        const userName = document.querySelector('#userName').value;
-        const password = document.querySelector('#password').value;
-        
-        firebase.auth().createUserWithEmailAndPassword(userName, password).catch(function(error) {
-        // Handle Errors here.
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        
+<script src="script.js"></script>
 
-        // ...
-        console.log(errorCode);
-		
-	});
-    })
-    
-    
-</script>    
 </body>
     
 </html>

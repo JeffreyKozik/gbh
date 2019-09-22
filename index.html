@@ -1,19 +1,30 @@
 <!doctype html>
 
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
+    <meta charset="utf-8">
 
-  <title>Vol</title>
-  <meta name="description" content="Vol">
-  <meta name="author" content="Vol">
-
-  <link rel="stylesheet" href="styles.css">
+    <title>Vol</title>
+    <meta name="description" content="Vol">
+    <meta name="author" content="Vol">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 
 </head>
 
 <body>
-<!--
+    <!--
     <div id="wrapper">
         <div id="leftMenu">
             <div id="userPicture">
@@ -35,36 +46,54 @@
         </div>
     </div>
 -->
-    
-    <input id="userName" type="text">
-    <input id="password" type="text">
+
+    <!-- 
     <button id="create">create user</button>
-    <button id="login">login</button>
+    <button id="login">login</button> -->
+    <div id="wrapper">
+        <div id="authBox">
+            <button type="button" id="loginBig" class="btn btn-primary btn-lg" data-toggle="collapse" data-target="#loginInputs"
+                aria-expanded="f" aria-controls="loginInputs">Login</button>
+            <div class="inputs collapse" id="loginInputs">
+                <input id="login-email" placeholder="email@address.com" type="text">
+                <input id="login-password" placeholder="password" type="password">
+                <button class="btn btn-primary" id="login-go">go</button>
+            </div>
+            <button type="button" id="signUpBig" class="btn btn-success btn-lg" data-toggle="collapse" data-target="#signUpInputs"
+                aria-expanded="f" aria-controls="signUpInputs">Sign-Up</button>
+            <div class="inputs collapse" id="signUpInputs">
+                <input id="signUp-email" placeholder="email@address.com" type="text">
+                <input id="signUp-password" placeholder="password" type="password">
+                <input id="signUp-password-confirm" placeholder="confirm password" type="password">
+                <button class="btn btn-primary" id="signUp-go">go</button>
+            </div>
+        </div>
+    </div>
 
-<!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-app.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-app.js"></script>
 
-<!-- TODO: Add SDKs for Firebase products that you want to use
+    <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-auth.js"></script>
 
-<script>
-  // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyAJeOk00rKxqC7vqH12T-OysJ88Y000ZaA",
-    authDomain: "volauthtest.firebaseapp.com",
-    databaseURL: "https://volauthtest.firebaseio.com",
-    projectId: "volauthtest",
-    storageBucket: "",
-    messagingSenderId: "817461452456",
-    appId: "1:817461452456:web:159163e0d1cd3ef3bf6c9d"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-</script>
-    
-<script src="script.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyAJeOk00rKxqC7vqH12T-OysJ88Y000ZaA",
+            authDomain: "volauthtest.firebaseapp.com",
+            databaseURL: "https://volauthtest.firebaseio.com",
+            projectId: "volauthtest",
+            storageBucket: "",
+            messagingSenderId: "817461452456",
+            appId: "1:817461452456:web:159163e0d1cd3ef3bf6c9d"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <script src="script.js"></script>
 
 </body>
-    
+
 </html>

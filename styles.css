@@ -1,20 +1,51 @@
-#wrapper{
-    width: 100%;
-    height: 500px;
+#wrapper {
+  width: 100%;
+  /* height: 500px; */
+  /* display: grid */
 }
 
-#leftMenu{
-    width: 18%;
-    height: 100%;
-    float: left;
-    outline: 2px solid;
-    padding-left: 2px;
-    
+#leftMenu {
+  width: 18%;
+  height: 100%;
+  float: left;
+  outline: 2px solid;
+  padding-left: 2px;
 }
 
-#rightUserProfile{
-    width: 80%;
-    height: 100%;
-    float: left;
-    outline: 2px solid;
+#rightUserProfile {
+  width: 80%;
+  height: 100%;
+  float: left;
+  outline: 2px solid;
+}
+
+#authBox {
+  background-color: rgb(143, 191, 245);
+  border-radius: 5px;
+  /* size */
+  width: 50%;
+  height: 50%;
+  /* centering */
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  /* guts */
+  padding: 20px 10px;
+  display: grid;
+  gap: 3%
+}
+
+#authBox > button {
+    display: block
+}
+
+#authBox > .inputs.show {
+    display: grid
+}
+
+#authBox input {
+    background-color: rgba(255, 255, 255, 0.2);
+    border:none;
+    text-align: center;
 }

@@ -24,47 +24,23 @@
 </head>
 
 <body>
-    <!--
-    <div id="wrapper">
-        <div id="leftMenu">
-            <div id="userPicture">
-                <p>hi</p>
-            </div>
-            <div id="links">
-                <u>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </u>
-            </div>
-            <div id="logout">
-
-            </div>
-        </div> 
-        <div id="rightUserProfile">
-            <p>hi</p>
-        </div>
-    </div>
--->
-
     <!-- 
     <button id="create">create user</button>
     <button id="login">login</button> -->
     <div id="wrapper">
         <div id="authBox">
             <button type="button" id="loginBig" class="btn btn-primary btn-lg" data-toggle="collapse" data-target="#loginInputs"
-                aria-expanded="f" aria-controls="loginInputs">Login</button>
-            <div class="inputs collapse" id="loginInputs">
-                <input id="login-email" placeholder="email@address.com" type="text">
-                <input id="login-password" placeholder="password" type="password">
+                aria-expanded="false" aria-controls="loginInputs">Login</button>
+            <div class="inputs collapse show" id="loginInputs">
+                <input id="login-email" placeholder="Enter email:" type="text">
+                <input id="login-password" placeholder="Enter password:" type="password">
                 <button class="btn btn-primary" id="login-go">go</button>
             </div>
-            <button type="button" id="signUpBig" class="btn btn-success btn-lg" data-toggle="collapse" data-target="#signUpInputs"
-                aria-expanded="f" aria-controls="signUpInputs">Sign-Up</button>
+            <button type="button" id="signUpBig" class="btn btn-danger btn-lg" data-toggle="collapse" data-target="#signUpInputs"
+                aria-expanded="false" aria-controls="signUpInputs">Sign-Up</button>
             <div class="inputs collapse" id="signUpInputs">
-                <input id="signUp-email" placeholder="email@address.com" type="text">
-                <input id="signUp-password" placeholder="password" type="password">
-                <input id="signUp-password-confirm" placeholder="confirm password" type="password">
+                <input id="signUp-email" placeholder="Enter email:" type="text">
+                <input id="signUp-password" placeholder="Enter password:" type="password">
                 <button class="btn btn-primary" id="signUp-go">go</button>
             </div>
         </div>

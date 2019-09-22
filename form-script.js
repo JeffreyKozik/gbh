@@ -17,9 +17,9 @@ submitButton.addEventListener('click', function () {
     var name = document.querySelector('#name').value;
     var dob = document.querySelector('#dob').value;
 
-    const interests = [...document.querySelectorAll('.interests')].filter(x => x.checked);
-    const skills = [...document.querySelectorAll('.skills')].filter(x => x.checked);
-    const causes = [...document.querySelectorAll('.causes')].filter(x => x.checked);
+    const interests = [...document.querySelectorAll('.interests')].filter(x => x.checked).map(x => x.value);
+    const skills = [...document.querySelectorAll('.skills')].filter(x => x.checked).map(x => x.value);
+    const causes = [...document.querySelectorAll('.causes')].filter(x => x.checked).map(x => x.value);
 
     var uid = currentUser.uid;
     var userRef = database.ref().child("users/"+ uid +"/info");

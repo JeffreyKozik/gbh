@@ -17,10 +17,11 @@
 
 <body>
   <!--navbar-->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="rounded float-right" href="#"> <!--link login-->
-      <img src="" width="30" height="30" alt=""> <!-- profile pic-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light mb-3">
+    <a class="rounded float-right" href="#"> <!-- link login -->
+      <img src="" width="30" height="30" alt=""> <!-- profile pic -->
     </a>
+    <!-- INSERT HOMEPAGE LINK BELOW -->
     <a class="navbar-brand" href="#">Vol</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -44,196 +45,222 @@
   </nav>
 
   <!--page body-->
-  <div class="container-fluid p-4">
+  <div id="wrapper" class="container-fluid">
 
-    <div class="row mt-5">
-      <div class="col">
+    <div class="row">
+      <div class="col mt-4">
         <h5 class="text-center">Followed Organizations</h5>
-        <br><h6>
-          <ul>
-            <li>Cleveland Food Bank</li>
-            <li>The Salvation Army</li>
-            <li>MedWish</li>
-          </ul></h6>
-        </div>
-        <div class="col">
-          <h5 class="text-center">Badges</h5>
-          <br>
-          <div class="col">
-            <div class="list-group">
-              <!-- # -->
-              <li class="list-group-item">
-                <div class="row">
-                  <div class="col-1">
-                    <i class="material-icons">pan_tool</i>
-                  </div>
-                  <div class="col-10">
-                    <h5 class="card-title col s11">50 Hours Of Volunteering</h5>
-                  </div>
-                </div>
-                <div class="progress">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="83" aria-valuemax="100" style="width: 83%;"></div>
-                </div>
-                <p class="card-text">83%</p>
-              </li>
-              <!-- # -->
-              <li class="list-group-item">
-                <div class="row">
-                  <div class="col-1">
-                    <i class="material-icons">spa</i>
-                  </div>
-                  <div class="col-10">
-                    <h5 class="card-title">Green Touch</h5>
-                  </div>
-                </div>
-                <div class="progress">
-                  <div class="progress-bar bg-success" role="progressbar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100" style="width: 92%;"></div>
-                </div>
-                <p class="card-text">92%</p>
-              </li>
-              <!-- # -->
-              <li class="list-group-item">
-                <div class="row">
-                  <div class="col-1">
-                    <i class="material-icons">group_work</i>
-                  </div>
-                  <div class="col-10">
-                    <h5 class="card-title">Give Back Cat</h5>
-                  </div>
-                </div>
-                <div class="progress">
-                  <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100" style="width: 33%; background-color: rgb(52, 125, 241);"></div>
-                </div>
-                <p class="card-text">33%</p>
-              </li>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <h5 class="text-center">About Me</h5>
-          <br>
-          <h5>Interests</h5>
-          <p>Animals, Cooking, Helping People</p>
-          <br>
-          <h5>Skills</h5>
-          <p>Fluent in Spanish, Microsoft Office, CPR certified</p>
-        </div>
+        <br>
+        <dl>
+          <dt class="col">Cleveland Food Bank</dt>
+          <dt class="col">The Salvation Army</dt>
+          <dt class="col">MedWish</dt>
+        </dl>
       </div>
-
-      <div class="row mt-5">
+      <div class="col-md-6 col-lg-4 mt-4">
+        <h5 class="text-center">Badges</h5>
+        <br>
         <div class="col">
-          <h5 class="text-center">Availability</h5>
-          <br>
-          <table class="table table-hover">
-            <thead>
-              <tr>
-                <th scope="col">Day</th>
-                <th scope="col">Hours</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>9/25/2019</td>
-                <td>1pm-6:30pm</td>
-              </tr>
-              <tr>
-                <td>10/2/2019</td>
-                <td>8am-11am</td>
-              </tr>
-              <tr>
-                <td>10/11/2019</td>
-                <td colspan="2">2pm-6pm</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div class="col">
-          <h5 class="text-center">Recent Activity</h5>
-          <br>
-          <table class="table table-hover">
-            <thead>
-              <tr>
-                <th>Organization</th>
-                <th>Date</th>
-                <th>Time</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td scope="col">The Salvation Army</td>
-                <td scope="col">9/17/19</td>
-                <td scope="col">5pm-8pm</td>
-              </tr>
-            </tbody>
-            <tbody>
-              <tr>
-                <td scope="col">Habitat for Humanity</td>
-                <td scope="col">9/18/19</td>
-                <td scope="col">3pm-8pm</td>
-              </tr>
-              <tr>
-                <td scope="col">MedWish</td>
-                <td scope="col">9/20/19</td>
-                <td scope="col">12pm-2pm</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div class="col"></div>
-      </div>
-
-      <div class="row mt-5">
-        <div class="col">
-          <h5>Upcoming Events</h5>
-        </div>
-      </div>
-
-      <div class="row mt-5">
-        <div class="col">
-          <div class="card ml-4" style="width: 18rem;">
-            <img class="card-img-top" src="img/img1.jpg" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Volunteer at FreshMart</h5>
-              <p class="card-text">Help support organic farmers in Cleveland</p>
-              <a href="#" class="btn btn-primary">Apply</a>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card ml-4" style="width: 18rem;">
-            <img class="card-img-top" src="img/img2.jpg" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Volunteer at the Salvation Army</h5>
-              <p class="card-text">Help the community solve poverty</p>
-              <a href="#" class="btn btn-primary">Apply</a>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card ml-4" style="width: 18rem;">
-            <img class="card-img-top" src="img/img3.jpg" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Volunteer at Red Cross</h5>
-              <p class="card-text">Encourage citizens to participate in blood donation</p>
-              <a href="#" class="btn btn-primary">Apply</a>
-            </div>
+          <div class="list-group">
+            <!-- # -->
+            <li class="list-group-item">
+              <div class="row">
+                <div class="col-1">
+                  <i class="material-icons">pan_tool</i>
+                </div>
+                <div class="col-10">
+                  <h5 class="card-title col s11">50 Hours Of Volunteering</h5>
+                </div>
+              </div>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="83" aria-valuemax="100" style="width: 83%;"></div>
+              </div>
+              <p class="card-text">83%</p>
+            </li>
+            <!-- # -->
+            <li class="list-group-item">
+              <div class="row">
+                <div class="col-1">
+                  <i class="material-icons">spa</i>
+                </div>
+                <div class="col-10">
+                  <h5 class="card-title">Green Touch</h5>
+                </div>
+              </div>
+              <div class="progress">
+                <div class="progress-bar bg-success" role="progressbar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100" style="width: 92%;"></div>
+              </div>
+              <p class="card-text">92%</p>
+            </li>
+            <!-- # -->
+            <li class="list-group-item">
+              <div class="row">
+                <div class="col-1">
+                  <i class="material-icons">group_work</i>
+                </div>
+                <div class="col-10">
+                  <h5 class="card-title">Give Back Cat</h5>
+                </div>
+              </div>
+              <div class="progress">
+                <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100" style="width: 33%; background-color: rgb(52, 125, 241);"></div>
+              </div>
+              <p class="card-text">33%</p>
+            </li>
           </div>
         </div>
       </div>
-
-      <div class="row mt-5">
-        <div class="col"></div>
-        <div class="col"></div>
-        <div class="col"></div>
+      <div class="col-12 col-lg-4 mt-4 pt-3 pt-lg-0">
+        <h5 class="text-center">About Me</h5>
+        <br>
+        <dl>
+          <dt class="col text-md-center text-lg-left">Interests</dt>
+          <dd class="col text-md-center text-lg-left">Animals, Cooking, Helping People</dd>
+          <br>
+          <dt class="col text-md-center text-lg-left">Skills</dt>
+          <dd class="col text-md-center text-lg-left">Fluent in Spanish, Microsoft Office, CPR certified</dd>
+        </dl>
       </div>
     </div>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  </body>
-  </html>
+    <div class="row">
+      <div class="col-md-6 col-lg-4 mt-4">
+        <h5 class="text-center">Availability</h5>
+        <br>
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th scope="col">Day</th>
+              <th scope="col">Hours</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>9/25/2019</td>
+              <td>1pm-6:30pm</td>
+            </tr>
+            <tr>
+              <td>10/2/2019</td>
+              <td>8am-11am</td>
+            </tr>
+            <tr>
+              <td>10/11/2019</td>
+              <td colspan="2">2pm-6pm</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="col-md-6 col-lg-4 mt-4">
+        <h5 class="text-center">Recent Activity</h5>
+        <br>
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>Organization</th>
+              <th>Date</th>
+              <th>Time</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td scope="col">The Salvation Army</td>
+              <td scope="col">9/17/19</td>
+              <td scope="col">5pm-8pm</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <td scope="col">Habitat for Humanity</td>
+              <td scope="col">9/18/19</td>
+              <td scope="col">3pm-8pm</td>
+            </tr>
+            <tr>
+              <td scope="col">MedWish</td>
+              <td scope="col">9/20/19</td>
+              <td scope="col">12pm-2pm</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+
+    <div class="row">
+      <div class="col mt-4">
+        <h5>Upcoming Events</h5>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-10 offset-2 offset-sm-0 col-sm-6 col-md-4 col-lg-3 mt-4 px-3">
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="img/img1.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Help FreshMart</h5>
+            <p class="card-text">Help support organic farmers in Cleveland</p>
+            <a href="#" class="btn btn-primary">Apply</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-10 offset-2 offset-sm-0 col-sm-6 col-md-4 col-lg-3 mt-4 px-3">
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="img/img2.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Volunteer at the Salvation Army</h5>
+            <p class="card-text">Help the community solve poverty</p>
+            <a href="#" class="btn btn-primary">Apply</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-10 offset-2 offset-sm-0 col-sm-6 col-md-4 col-lg-3 mt-4 px-3">
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="img/img3.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Donate Blood to the Red Cross</h5>
+            <p class="card-text">Encourage citizens to participate in blood donation</p>
+            <a href="#" class="btn btn-primary">Apply</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-10 offset-2 offset-sm-0 col-sm-6 col-md-4 col-lg-3 mt-4 px-3">
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="img/img4.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Plant a Tree</h5>
+            <p class="card-text">Help support organic farmers in Cleveland</p>
+            <a href="#" class="btn btn-primary">Apply</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-10 offset-2 offset-sm-0 col-sm-6 col-md-4 col-lg-3 mt-4 px-3">
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="img/img5.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Visit the Elderly</h5>
+            <p class="card-text">Help the community solve poverty</p>
+            <a href="#" class="btn btn-primary">Apply</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-10 offset-2 offset-sm-0 col-sm-6 col-md-4 col-lg-3 mt-4 px-3">
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="img/img6.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Volunteer at the Orphanage</h5>
+            <p class="card-text">Encourage citizens to participate in blood donation</p>
+            <a href="#" class="btn btn-primary">Apply</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

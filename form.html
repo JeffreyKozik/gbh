@@ -1,0 +1,79 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Vol</title>
+  <meta name="description" content="Vol">
+  <meta name="author" content="Vol">
+
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>    
+    Full Name:<input id="name" type="text"><br>
+    Date of Birth: <input id="dob" type="text"><br>
+
+    <h2>Areas of Interest</h2>
+    <input class="interests" type="checkbox" value="academics" id="interest-academics"> academics
+    <input class="interests" type="checkbox" value="animals" id="interest-animals"> animals
+    <input class="interests" type="checkbox" value="arts" id="interest-arts"> arts
+    <input class="interests" type="checkbox" value="children" id="interest-children"> children
+    <input class="interests" type="checkbox" value="disaster" id="interest-disaster"> disaster
+    <input class="interests" type="checkbox" value="finance" id="interest-finance"> finance
+    <input class="interests" type="checkbox" value="food" id="interest-food"> food
+    <input class="interests" type="checkbox" value="hr" id="interest-hr"> hr <br>
+
+    <h2>skills</h2>
+    <input class="skills" type="checkbox" value="academics" id="skills-academics"> academics
+    <input class="skills" type="checkbox" value="animals" id="skills-animals"> animals
+    <input class="skills" type="checkbox" value="arts" id="skills-arts"> arts
+    <input class="skills" type="checkbox" value="children" id="skills-children"> children
+    <input class="skills" type="checkbox" value="disaster" id="skills-disaster"> disaster
+    <input class="skills" type="checkbox" value="finance" id="skills-finance"> finance
+    <input class="skills" type="checkbox" value="food" id="skills-food"> food
+    <input class="skills" type="checkbox" value="hr" id="skills-hr"> hr <br>
+
+    <h2>what causes are important to you</h2>
+    <input class="causes" type="checkbox" value="academics" id="causes-academics"> academics
+    <input class="causes" type="checkbox" value="animals" id="causes-animals"> animals
+    <input class="causes" type="checkbox" value="arts" id="causes-arts"> arts
+    <input class="causes" type="checkbox" value="children" id="causes-children"> children
+    <input class="causes" type="checkbox" value="disaster" id="causes-disaster"> disaster
+    <input class="causes" type="checkbox" value="finance" id="causes-finance"> finance
+    <input class="causes" type="checkbox" value="food" id="causes-food"> food
+    <input class="causes" type="checkbox" value="hr" id="causes-hr"> hr <br>
+
+    <button id="submit">submit</button>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-database.js"></script>
+
+<script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyAJeOk00rKxqC7vqH12T-OysJ88Y000ZaA",
+      authDomain: "volauthtest.firebaseapp.com",
+      databaseURL: "https://volauthtest.firebaseio.com",
+      projectId: "volauthtest",
+      storageBucket: "",
+      messagingSenderId: "817461452456",
+      appId: "1:817461452456:web:159163e0d1cd3ef3bf6c9d"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+    
+<script src="form-script.js"></script>
+
+
+</body>
+    
+</html>

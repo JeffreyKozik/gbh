@@ -9,8 +9,31 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <!-- Material Icons -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+  https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-database.js"></script>
+
+  <script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAJeOk00rKxqC7vqH12T-OysJ88Y000ZaA",
+    authDomain: "volauthtest.firebaseapp.com",
+    databaseURL: "https://volauthtest.firebaseio.com",
+    projectId: "volauthtest",
+    storageBucket: "",
+    messagingSenderId: "817461452456",
+    appId: "1:817461452456:web:159163e0d1cd3ef3bf6c9d"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  </script>
 
   <link rel="stylesheet" href="css/style.css">
+  <script type="text/javascript" src="main-page-script.js"></script>
 
   <title>Homepage</title>
 </head>
@@ -21,7 +44,7 @@
     <a class="rounded float-right" href="#"> <!-- link login -->
       <img src="" width="30" height="30" alt=""> <!-- profile pic -->
     </a>
-    <!-- INSERT HOMEPAGE LINK BELOW -->
+    <!-- TODO: insert homepage link -->
     <a class="navbar-brand" href="#">Vol</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -115,10 +138,10 @@
         <br>
         <dl>
           <dt class="col text-md-center text-lg-left">Interests</dt>
-          <dd class="col text-md-center text-lg-left">Animals, Cooking, Helping People</dd>
+          <dd id="interests-info" class="col text-md-center text-lg-left"></dd>
           <br>
           <dt class="col text-md-center text-lg-left">Skills</dt>
-          <dd class="col text-md-center text-lg-left">Fluent in Spanish, Microsoft Office, CPR certified</dd>
+          <dd id="skills-info" class="col text-md-center text-lg-left"></dd>
         </dl>
       </div>
     </div>

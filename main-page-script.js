@@ -13,15 +13,14 @@ firebase.auth().onAuthStateChanged(function(user) {
             var skills = data.skills;
             var causes = data.causes;
 
-            document.querySelector("#name-info").innerHTML = "My name is: " + name;
-            document.querySelector("#dob-info").innerHTML = "My DOB is: " + dob;
-            document.querySelector("#interests-info").innerHTML = "My interests are: " + interests;
-            document.querySelector("#skills-info").innerHTML = "My skills are: " + skills;
-            document.querySelector("#causes-info").innerHTML = "My causes are: " + causes;
+            // document.querySelector("#name-info").innerText = "My name is: " + name;
+            // document.querySelector("#dob-info").innerText = "My DOB is: " + dob;
+            document.querySelector("#interests-info").innerText = interests;
+            document.querySelector("#skills-info").innerText = skills;
+            // document.querySelector("#causes-info").innerText = "My causes are: " + causes;
         });
     } else {
       // No user is signed in.
 
     }
   });
-

@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tagautos -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <title>OrganizationPage</title>
+</head>
+
+<body>
+  <!--navbar-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="rounded float-right" href="#"> <!--link login-->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+     
+    </a>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Canvas </a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Organizations<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Friends</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Settings</a>
+        </li>
+      </ul>
+    </div>
+    <div align="center">
+    <a class="navbar-brand" href="#">Vol</a>
+    </div>
+    <div align="right">
+    Lisa    
+    <img src="https://cdn.pixabay.com/photo/2015/11/03/13/47/love-1020869__480.jpg" class="profile pic m-2" height="30" width="30" alt="profile picture" style="border-radius: 50%">
+    </div>
+        <!-- profile pic-->
+  </nav>
+
+<!--Firebase downloads-->
+    <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-app.js"></script>
+    <script src="rsvp.min.js"></script>
+    <script src="https://cdn.firebase.com/js/client/1.0.17/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-auth.js"></script>
+    <script src="https://cdn.firebase.com/libs/geofire/2.0.0/geofire.min.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyAJeOk00rKxqC7vqH12T-OysJ88Y000ZaA",
+            authDomain: "volauthtest.firebaseapp.com",
+            databaseURL: "https://volauthtest.firebaseio.com",
+            projectId: "volauthtest",
+            storageBucket: "",
+            messagingSenderId: "817461452456",
+            appId: "1:817461452456:web:159163e0d1cd3ef3bf6c9d"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+    <script>
+        var firebaseRef = new Firebase("https://volauthtest.firebaseio.com/geofire/");
+        var geoFire = new GeoFire(firebaseRef);
+        var loc;
+        var rightOrg;
+//        var distHH;
+//        var distMW;
+//        var distCFB;
+//        var distSA;
+        navigator.geolocation.getCurrentPosition(
+            function (response) {
+                loc = response;
+                var geoQuery = geoFire.query({
+               center: [loc.coords.latitude, loc.coords.longitude],
+               radius: 25
+                });
+                geoQuery.on("key_entered", function(key, location, distance) {
+            if (key == "HH"){
+                document.getElementById("distHH").innerText += String((distance/1.609).toPrecision(2));
+            }
+            else if (key == "MW"){
+                document.getElementById("distMW").innerText += String((distance/1.609).toPrecision(2));
+            }
+            else if (key == "CFB"){
+                document.getElementById("distCFB").innerText += String((distance/1.609).toPrecision(2));
+            }
+            else if (key == "SA"){
+                document.getElementById("distSA").innerText += String((distance/1.609).toPrecision(2));
+            }
+        });
+            }
+        )
+        </script>
+        <script>
+
+        geoFire.set("HH", [41.4981644, -81.6960536]).then(
+            function() {
+            }, function(error) {
+            console.log("Error: " + error);
+        });
+        geoFire.set("MW", [41.5065694, -81.6888406]).then(
+              function() {
+               }, function(error) {
+              console.log("Error: " + error);
+        });
+        geoFire.set("CFB", [41.4728716, -81.665527]).then(
+              function() {
+               }, function(error) {
+              console.log("Error: " + error);
+        });
+        geoFire.set("SA", [41.4428689, -81.6952675]).then(
+              function() {
+               }, function(error) {
+              console.log("Error: " + error);
+        });
+    </script>
+    
+  <!--page body-->
+  <div class="container-fluid p-4">
+    <div align="center">
+    <div class="row p-4">
+        <div class="col p-1">
+            <div class = "card" style="width: 15rem">
+                <img src="https://cdn.pixabay.com/photo/2016/11/29/03/53/architecture-1867187_1280.jpg" class="card-img-top" alt="house picture" style="height: 10rem;">
+                <div class="card text-center" style="width: 15rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                        <a href="https://www.habitat.org">Habitat for Humanity</a>
+                        </h5>
+                        <p class="card-text"> 
+                                GiveBackBuild
+                            <br>
+                                Saturday, September 28th
+                            <br>
+                                9 a.m. - 3 p.m.
+                            <br>
+                                3 more volunteers needed
+                        </p>
+                        <span id="distHH"></span>
+                        <span> miles away</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col p-1">
+            <div class = "card" style="width: 15rem;">
+                <img src="https://cdn.pixabay.com/photo/2018/03/13/09/56/checklist-3222079__480.jpg" class="card-img-top" alt="house picture" style="height: 10rem;">
+                <div class="card text-center" style="width: 15rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                        <a href="https://www.medwish.org/" >MedWish</a>
+                        </h5>
+                        <p class="card-text"> 
+                                Healthathon
+                            <br>
+                                Sunday, September 29th
+                            <br>
+                            8 a.m. - 12 p.m.
+                            <br>
+                                10 more volunteers needed
+                        </p>
+                        <span id="distMW"></span>
+                        <span> miles away</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+            <div class="col p-1">
+            <div class = "card" style="width: 15rem">
+                <img src="https://cdn.pixabay.com/photo/2014/12/16/09/18/canned-food-570114__480.jpg" class="card-img-top" alt="canned food picture" style="height: 10rem;">
+                <div class="card text-center" style="width: 15rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                        <a href="https://www.greaterclevelandfoodbank.org/" >Cleveland Food Bank</a>
+                        </h5>
+                        <p class="card-text"> 
+                                FeedForTheFuture
+                            <br>
+                                Tuesday, October 2nd
+                            <br>
+                            5 p.m. - 9 p.m.
+                            <br>
+                                2 more volunteers needed
+                        </p>
+                        <span id="distCFB"></span>
+                        <span> miles away</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col p-1">
+            <div class = "card" style="width: 15rem">
+                <img src="https://cdn.pixabay.com/photo/2015/11/07/11/46/fashion-1031469__480.jpg" class="card-img-top" alt="clothes picture" style="height: 10rem;">
+                <div class="card text-center" style="width: 15rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                        <a href="https://www.salvationarmyusa.org/usn/" >The Salvation Army</a>
+                        </h5>
+                        <p class="card-text"> 
+                                ClotheCleveland
+                            <br>
+                                Wednesday, October 10th
+                            <br>
+                            6 p.m. - 8 p.m.
+                            <br>
+                                1 more volunteer needed
+                        </p>
+                        <span id="distSA"></span>
+                        <span> miles away</span>
+                    </div>
+                </div>
+            </div>
+        
+        
+        </div>
+        
+    </div>
+      
+      
+      
+      
+      <div class="row p-1">
+        
+    </div>
+    </div>
+  </div>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
